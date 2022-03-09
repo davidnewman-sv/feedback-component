@@ -40,19 +40,19 @@ $hover-bg-color:  $color-blue-grey-10;
 @charset "UTF-8";
 @font-face {
     font-family: VIC;
-    src: url(https://www.service.vic.gov.au/assets/fonts/vic-bold-webfont.woff2) format("woff2"), url(https://www.service.vic.gov.au/assets/fonts/vic-bold-webfont.woff) format("woff");
+    src: url(fonts/vic-bold-webfont.woff2) format("woff2"), url(fonts/vic-bold-webfont.woff) format("woff");
     font-weight: 700;
     font-style: normal
 }
 @font-face {
     font-family: VIC;
-    src: url(https://www.service.vic.gov.au/assets/assets/fonts/vic-medium-webfont.woff2) format("woff2"), url(https://www.service.vic.gov.au/assets/assets/fonts/vic-medium-webfont.woff) format("woff");
+    src: url(fonts/vic-medium-webfont.woff2) format("woff2"), url(fonts/vic-medium-webfont.woff) format("woff");
     font-weight: 600;
     font-style: normal
 }
 @font-face {
     font-family: VIC;
-    src: url(https://www.service.vic.gov.au/assets/assets/fonts/vic-regular-webfont.woff2) format("woff2"), url(https://www.service.vic.gov.au/assets/assets/fonts/vic-regular-webfont.woff) format("woff");
+    src: url(fonts/vic-regular-webfont.woff2) format("woff2"), url(fonts/vic-regular-webfont.woff) format("woff");
     font-weight: 400;
     font-style: normal
 }
