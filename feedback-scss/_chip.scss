@@ -1,0 +1,32 @@
+.chips {
+    gap: 8px;
+    margin-bottom: 32px;
+}
+.chip {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    border: 1px solid $color-blue-grey-75;
+    border-radius: 16px;
+    background-color: white;
+    color: $color-blue-grey-100;
+    transition: $animation--productive;
+
+    p {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 600;
+        padding: 0 16px;
+        color: inherit;
+    }
+    
+    &:hover {
+        background-color: $hover-bg-color
+    }
+
+    &.active {
+        background-color: $color-orange;
+        color: white;
+        border-color: $color-orange;
+    }
+}

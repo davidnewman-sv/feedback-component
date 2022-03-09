@@ -1,0 +1,139 @@
+// Animation Variables 
+$animation-speed-fast-01: 70ms;
+$animation-speed-fast-02: 110ms;
+$animation-speed-moderate-01: 150ms;
+$animation-speed-moderate-02: 240ms;
+$animation-speed-slow-01: 400ms;
+$animation-speed-slow-02: 700ms;
+$animation-mode-productive:cubic-bezier(0.2, 0, 0.38, 0.9);
+$animation-mode-expressive:cubic-bezier(0.4, 0.14, 0.3, 1);
+$animation--expressive: all $animation-speed-fast-02 $animation-mode-expressive;
+$animation--productive: all $animation-speed-moderate-02 $animation-mode-productive;
+
+// .animation {
+//     transition: all $animation-speed-moderate-02 $animation-mode-expressive;
+// }
+
+$color-orange: #E3710A;
+$color-orange-hyperlink: #9D5B00;
+$color-orange-10: #FCF1E7;
+$color-orange-hyperlink: #9D5B00;
+$color-blue-grey-100:#3C4A60;
+$color-blue-grey-75:#6D7788;
+$color-blue-grey-50:#9EA5B0;
+$color-blue-grey-25:#CED2D7;
+$color-blue-grey-10:#ECEDEF;
+$color-secondary-grey-100:#1C2026;
+$color-secondary-grey-25:#C6C7C9;
+$color-secondary-grey-10:#E8E9E9;
+$color-green-50: #ECFBEB;
+$color-green-100: #D9F6D6;
+$color-green-800: #185512;
+$color-red-750: #952525;
+$color-red-50: #FAEBEB;
+
+$hover-bg-color:  $color-blue-grey-10;
+
+
+
+
+@charset "UTF-8";
+@font-face {
+    font-family: VIC;
+    src: url(https://www.service.vic.gov.au/assets/fonts/vic-bold-webfont.woff2) format("woff2"), url(https://www.service.vic.gov.au/assets/fonts/vic-bold-webfont.woff) format("woff");
+    font-weight: 700;
+    font-style: normal
+}
+@font-face {
+    font-family: VIC;
+    src: url(https://www.service.vic.gov.au/assets/assets/fonts/vic-medium-webfont.woff2) format("woff2"), url(https://www.service.vic.gov.au/assets/assets/fonts/vic-medium-webfont.woff) format("woff");
+    font-weight: 600;
+    font-style: normal
+}
+@font-face {
+    font-family: VIC;
+    src: url(https://www.service.vic.gov.au/assets/assets/fonts/vic-regular-webfont.woff2) format("woff2"), url(https://www.service.vic.gov.au/assets/assets/fonts/vic-regular-webfont.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+body {
+    padding: 50px;
+}
+.block {
+    margin-bottom: 40px;
+}
+
+h1,h2,h3,h4,h5,p,span,button{
+    font-family: VIC, 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0;
+    margin:0;
+    padding: 0;
+    color: $color-blue-grey-100;
+}
+h3 {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+h4 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+    width: 375px;
+    color: $color-blue-grey-100;
+
+    svg g {
+        fill: $color-blue-grey-100;
+    }
+
+    &-response {
+        p.label {
+            margin-bottom: 8px;
+        }
+    }
+    &-response {
+        display:none;
+    }
+}
+button.primary {
+    background-color: $color-orange;
+    border: 0;
+    border-radius: 2px;
+    height: 48px;
+    width: fit-content;
+    padding: 0 32px;
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+    transition: all $animation-speed-fast-02 $animation-mode-productive;
+
+    &:hover {
+        background: $color-orange-hyperlink;
+        color: white;
+    }
+}

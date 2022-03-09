@@ -1,0 +1,399 @@
+@font-face {
+  font-family: VIC;
+  src: url(https://www.service.vic.gov.au/assets/fonts/vic-bold-webfont.woff2) format("woff2"), url(https://www.service.vic.gov.au/assets/fonts/vic-bold-webfont.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: VIC;
+  src: url(https://www.service.vic.gov.au/assets/assets/fonts/vic-medium-webfont.woff2) format("woff2"), url(https://www.service.vic.gov.au/assets/assets/fonts/vic-medium-webfont.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: VIC;
+  src: url(https://www.service.vic.gov.au/assets/assets/fonts/vic-regular-webfont.woff2) format("woff2"), url(https://www.service.vic.gov.au/assets/assets/fonts/vic-regular-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  padding: 50px;
+}
+
+.block {
+  margin-bottom: 40px;
+}
+
+h1, h2, h3, h4, h5, p, span, button {
+  font-family: VIC, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0;
+  margin: 0;
+  padding: 0;
+  color: #3C4A60;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 24px;
+  width: 375px;
+  color: #3C4A60;
+}
+
+.feedback svg g {
+  fill: #3C4A60;
+}
+
+.feedback-response p.label {
+  margin-bottom: 8px;
+}
+
+.feedback-response {
+  display: none;
+}
+
+button.primary {
+  background-color: #E3710A;
+  border: 0;
+  border-radius: 2px;
+  height: 48px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 32px;
+  font-size: 19px;
+  font-weight: 700;
+  color: white;
+  -webkit-transition: all 110ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition: all 110ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+button.primary:hover {
+  background: #9D5B00;
+  color: white;
+}
+
+.thumbs-container {
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.thumbs {
+  height: 78px;
+  min-width: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #6D7788;
+  border-radius: 2px;
+}
+
+.thumbs p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.thumbs {
+  background: white;
+  cursor: pointer;
+  -webkit-transition: all 240ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition: all 240ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+.thumbs#good.selected {
+  border-color: #185512;
+  background: #D9F6D6;
+  color: #185512;
+}
+
+.thumbs#good.selected svg path {
+  fill: #185512;
+}
+
+.thumbs#bad.selected {
+  border-color: #952525;
+  background: #FAEBEB;
+  color: #952525;
+}
+
+.thumbs#bad.selected svg path {
+  fill: #952525;
+}
+
+.thumbs:hover {
+  border-color: #3C4A60;
+  background: #ECEDEF;
+}
+
+.thumbs:focus {
+  outline: 2px solid #E3710A;
+  background: #ECEDEF;
+}
+
+.thumbs-up, .thumbs-down {
+  width: 24px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.thumbs-down {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.chips {
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.chip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 32px;
+  border: 1px solid #6D7788;
+  border-radius: 16px;
+  background-color: white;
+  color: #3C4A60;
+  -webkit-transition: all 240ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition: all 240ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+.chip p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  padding: 0 16px;
+  color: inherit;
+}
+
+.chip:hover {
+  background-color: #ECEDEF;
+}
+
+.chip.active {
+  background-color: #E3710A;
+  color: white;
+  border-color: #E3710A;
+}
+
+@-webkit-keyframes thumb {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  35% {
+    -webkit-transform: rotate(24deg);
+            transform: rotate(24deg);
+  }
+  55% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  70% {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+  80% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes thumb {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  35% {
+    -webkit-transform: rotate(24deg);
+            transform: rotate(24deg);
+  }
+  55% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  70% {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+  80% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes hand {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  30% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  50% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  70% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  90% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes hand {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  30% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  50% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  70% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  90% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.thumb {
+  -webkit-transform-origin: 10px 10.3px;
+          transform-origin: 10px 10.3px;
+}
+
+.thumbs svg.whole-hand {
+  -webkit-transform-origin: 0 14px;
+          transform-origin: 0 14px;
+}
+
+.thumbs.animated {
+  background-color: #ECEDEF;
+}
+
+.thumbs.animated path.thumb {
+  -webkit-animation: thumb 600ms cubic-bezier(0.4, 0.14, 0.3, 1);
+          animation: thumb 600ms cubic-bezier(0.4, 0.14, 0.3, 1);
+}
+
+.thumbs.animated svg.whole-hand {
+  -webkit-animation: hand 600ms cubic-bezier(0.4, 0.14, 0.3, 1);
+          animation: hand 600ms cubic-bezier(0.4, 0.14, 0.3, 1);
+}
+
+.thumbs.animated.selected {
+  background-color: #ECEDEF;
+}
+
+.thumbs.animated.selected path.thumb {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.thumbs.animated.selected svg.whole-hand {
+  -webkit-animation: none;
+          animation: none;
+}
+/*# sourceMappingURL=feedback-component.css.map */

@@ -1,0 +1,100 @@
+
+@keyframes thumb {
+    0% {
+        transform: rotate(0deg); 
+    }
+    // 10% {
+    //     transform: rotate(0deg);
+    // }
+    35% {
+        transform: rotate(24deg); 
+    }
+    55% {
+        transform: rotate(-4deg); 
+    }
+    70% {
+        transform: rotate(8deg);
+    }
+    80% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes hand {
+    0% {
+        transform: rotate(0deg); 
+    }
+    30% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-15deg); 
+    }
+    70% {
+        transform: rotate(2deg);
+    }
+    90% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.thumb {
+    // transform: rotate(55deg);
+    transform-origin: 10px 10.3px;
+}
+
+.thumbs {
+    svg.whole-hand {
+        transform-origin: 0 14px;
+    }
+    
+    &.animated {
+        background-color: $hover-bg-color;
+        
+        & path.thumb {
+            // animation-name: thumb;
+            animation: thumb 600ms $animation-mode-expressive;
+            
+        }
+        & svg.whole-hand {
+            animation: hand 600ms $animation-mode-expressive;
+        }
+    }
+    &.animated.selected {
+        background-color: $hover-bg-color;
+        
+        & path.thumb {
+            // animation-name: thumb;
+            animation: none;
+            
+        }
+        & svg.whole-hand {
+            animation: none;
+        }
+    }
+}
+
+// .st2{fill:#26A9E0;}
+// .st5{fill:#EC1C24;}
+
+
+
+// @keyframes hand {
+//     0% {
+//         transform: translateY(0px); 
+//     }
+//     30% {
+//         transform: translateY(-4px);
+//     }
+//     70% {
+//         transform: translateY(-4px); 
+//     }
+//     100% {
+//         transform: translateY(0px);
+//     }
+// }

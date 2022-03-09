@@ -1,0 +1,72 @@
+.thumbs-container {
+    gap: 8px;
+    width:fit-content;
+}
+
+.thumbs {
+    height: 78px;
+    min-width: 80px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-blue-grey-75;
+    border-radius: 2px;
+
+    p {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        padding: 0;
+        margin:0;
+        color: inherit;
+    }
+    svg path {
+        // fill: inherit;
+    }
+    & {
+        background: white;
+        cursor: pointer;
+        transition: $animation--productive;
+
+        &#good.selected {
+            border-color: $color-green-800;
+            background: $color-green-100;
+            color: $color-green-800;
+
+            & svg path {
+                fill: $color-green-800;
+            }
+        }
+        &#bad.selected {
+            border-color: $color-red-750;
+            background: $color-red-50;
+            color: $color-red-750;
+
+            & svg path {
+                fill: $color-red-750;
+            }
+        }
+
+        &:hover {
+            border-color: $color-blue-grey-100;
+            background: $color-blue-grey-10;
+        }
+        &:focus {
+            outline: 2px solid $color-orange;
+            background: $color-blue-grey-10;
+        }
+    }
+
+}
+.thumbs-up, .thumbs-down {
+    width: 24px;
+    flex-grow:1;
+    align-items: center;
+
+} 
+
+.thumbs-down {
+    flex-grow:1;
+    transform: rotate(180deg);
+}
+
+
