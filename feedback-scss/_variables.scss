@@ -119,7 +119,7 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     gap: 24px;
-    width: 375px;
+    max-width: 375px;
     color: $color-blue-grey-100;
 
     svg g {

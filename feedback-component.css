@@ -109,7 +109,7 @@ p {
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: 24px;
-  width: 375px;
+  max-width: 375px;
   color: #3C4A60;
 }
 
