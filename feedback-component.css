@@ -21,6 +21,7 @@
 
 body {
   padding: 50px;
+  max-width: 600px;
 }
 
 .block {
