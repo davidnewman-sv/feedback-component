@@ -56,10 +56,15 @@ $hover-bg-color:  $color-blue-grey-10;
     font-weight: 400;
     font-style: normal
 }
+html {
+    background-color: $color-blue-grey-10;
+}
 
 body {
     padding: 50px;
-    max-width: 600px
+    max-width: 600px;
+    background-color: white;
+    margin: 0 auto;
 }
 .block {
     margin-bottom: 40px;
@@ -74,6 +79,11 @@ h1,h2,h3,h4,h5,p,span,button{
     padding: 0;
     color: $color-blue-grey-100;
 }
+h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 16px;
+}
 h3 {
     font-size: 22px;
     line-height: 28px;
@@ -85,6 +95,10 @@ h4 {
     font-weight: 700;
     line-height: 24px;
     margin-bottom: 8px;
+}
+p {
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .flex-row {
