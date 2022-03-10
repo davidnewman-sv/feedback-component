@@ -47,6 +47,11 @@
                 };
             });
 
+            $(".primary").click(function() {
+                $("#feedback").css("display", "none");
+                $("#thankyou").css("display", "flex");
+            });
+
         }); // -- End Document.ready
     </script>
 </head>
@@ -59,6 +64,14 @@
         <h3>What's next</h3>
         <p>Lorem ipsum dolor sit amet ac eros bibendum.
             Sed curabitur elit lacus augue rhoncus magna .</p>
+    </div>
+    <div id="thankyou">
+        <div class="icon">
+            <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.86364 12.2023L2.09091 7.43268L0.5 9.02256L6.86364 15.3821L20.5 1.75455L18.9091 0.164673L6.86364 12.2023Z"/>
+            </svg>
+        </div>
+        <div class="message">Thank you</div>
     </div>
     <div id="feedback" class="feedback flex">
         <div class="feedback-initial flex">
@@ -150,7 +163,7 @@
                 <label for="other"><p><strong>If other, please explain</strong></p></label>
                 <textarea type="text" name="other"></textarea>
             </div>
-            <button class="primary">Send Feedback</button>
+            <button class="primary" type="reset">Send Feedback</button>
         </div>
     </div>
 </body>

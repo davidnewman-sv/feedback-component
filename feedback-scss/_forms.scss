@@ -32,3 +32,24 @@ label {
     display: block;
     margin-bottom: 8px;
 }
+
+#thankyou {
+    display: none;
+    // display: flex;
+    gap: 12px;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid $color-green-800;
+    border-radius: 2px;
+    font-family: VIC;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 0 32px;
+    height: 48px;
+    background-color: $color-green-50;
+    color: $color-green-800;
+
+    & svg {
+        fill: $color-green-800;
+    }
+}

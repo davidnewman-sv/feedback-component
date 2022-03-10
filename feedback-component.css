@@ -454,4 +454,28 @@ label {
   display: block;
   margin-bottom: 8px;
 }
+
+#thankyou {
+  display: none;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #185512;
+  border-radius: 2px;
+  font-family: VIC;
+  font-size: 19px;
+  font-weight: 700;
+  padding: 0 32px;
+  height: 48px;
+  background-color: #ECFBEB;
+  color: #185512;
+}
+
+#thankyou svg {
+  fill: #185512;
+}
 /*# sourceMappingURL=feedback-component.css.map */
