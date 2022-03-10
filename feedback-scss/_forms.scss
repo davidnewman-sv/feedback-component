@@ -1,0 +1,34 @@
+.other {
+    display: none;
+    margin-bottom: 24px;
+
+    &.show {
+        display: block;
+    }
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 12px;
+    font-family: VIC;
+    font-size: 16px;
+    color: $color-blue-grey-100;
+    line-height: 24px;
+    font-weight: 400;
+    resize: none;
+    border: 1px solid $color-blue-grey-75;
+    border-radius: 2px;
+    
+
+    &:focus {
+        outline: $focus-effect;
+        border-color: $color-orange;
+    }
+
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+}

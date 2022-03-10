@@ -33,6 +33,7 @@ $color-red-750: #952525;
 $color-red-50: #FAEBEB;
 
 $hover-bg-color:  $color-blue-grey-10;
+$focus-effect: 2px solid $color-orange;
 
 
 
@@ -69,6 +70,7 @@ body {
 .block {
     margin-bottom: 40px;
 }
+
 
 h1,h2,h3,h4,h5,p,span,button{
     font-family: VIC, 'Helvetica Neue', sans-serif;
@@ -139,6 +141,7 @@ button.primary {
     background-color: $color-orange;
     border: 0;
     border-radius: 2px;
+    margin-top: 8px;
     height: 48px;
     width: fit-content;
     padding: 0 32px;

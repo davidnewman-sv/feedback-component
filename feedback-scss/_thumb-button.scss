@@ -51,7 +51,7 @@
             background: $color-blue-grey-10;
         }
         &:focus {
-            outline: 2px solid $color-orange;
+            outline: $focus-effect;
             background: $color-blue-grey-10;
         }
     }

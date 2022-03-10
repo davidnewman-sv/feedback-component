@@ -1,6 +1,6 @@
 .chips {
     gap: 8px;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 .chip {
     display: flex;
@@ -28,5 +28,9 @@
         background-color: $color-orange;
         color: white;
         border-color: $color-orange;
+    }
+
+    &:focus {
+        outline: $focus-effect;
     }
 }

@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            // Button hover
+            // Button hover ~~~~~~~~~~
             $(".thumbs").mouseenter(function() {
                 let button = $(this);
                 button.addClass("animated");
@@ -21,7 +21,7 @@
 
             }); // -- End hover
 
-            // Button onClick
+            // Button onClick ~~~~~~~~~
             $(".thumbs").click(function() {
                 let button = $(this);
                 let chipContainer = button.attr("id") + "--chips";
@@ -39,8 +39,12 @@
                 }
             }); // -- End onClick
 
+            // Chips ~~~~~~~~~~~
             $(".chip").click(function() {
                 $(this).toggleClass("active");
+                if ($(this).attr("value") == "other") {
+                    $(".other").toggleClass("show");;
+                };
             });
 
         }); // -- End Document.ready
@@ -119,6 +123,11 @@
                 <button class="chip"><p>Flowed easily</p></button>
                 <button class="chip"><p>Fair</p></button>
                 <button class="chip"><p>Quick and easy</p></button>
+                <button class="chip" value="other"><p>Other</p></button>
+            </div>
+            <div class="other">
+                <label for="other"><p><strong>If other, please explain</strong></p></label>
+                <textarea type="text" name="other"></textarea>
             </div>
             <button class="primary">Send Feedback</button>
         </div>
@@ -135,6 +144,7 @@
                 <button class="chip"><p>Tricky to complete</p></button>
                 <button class="chip"><p>Unfair</p></button>
                 <button class="chip"><p>Got stuck</p></button>
+                <button class="chip"><p>Other</p></button>
             </div>
             <button class="primary">Send Feedback</button>
         </div>
