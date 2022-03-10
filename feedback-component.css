@@ -69,6 +69,10 @@ p {
   line-height: 24px;
 }
 
+a {
+  color: #9D5B00;
+}
+
 .flex-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,6 +149,10 @@ button.primary {
 button.primary:hover {
   background: #9D5B00;
   color: white;
+}
+
+.help {
+  margin-bottom: 24px;
 }
 
 .thumbs-container {

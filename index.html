@@ -21,7 +21,7 @@
 
             }); // -- End hover
 
-            // Button onClick ~~~~~~~~~
+            // Thumbs Button onClick ~~~~~~~~~
             $(".thumbs").click(function() {
                 let button = $(this);
                 let chipContainer = button.attr("id") + "--chips";
@@ -47,10 +47,16 @@
                 };
             });
 
+            // Submit ~~~~~~~~~~~
             $(".primary").click(function() {
                 $("#feedback").css("display", "none");
                 $("#thankyou").css("display", "flex");
             });
+
+            // Reset ~~~~~~~~~~~
+            $("#thankyou").click(function() {
+                location.reload(true);
+            })
 
         }); // -- End Document.ready
     </script>
@@ -123,6 +129,7 @@
                     </button>
             </div>
         </div>
+
         <div id="good--chips" class="feedback-response">
             <p class="label"><strong>Tell us about your experience</strong></p>
             <div class="flex-row chips animation">
@@ -142,6 +149,12 @@
                 <label for="other"><p><strong>If other, please explain</strong></p></label>
                 <textarea type="text" name="other"></textarea>
             </div>
+
+            <div class="help">
+                <p class=""><strong>Still need help?</strong></p>
+                <p><a href="#">Contact us</a> so that we can assist.</p>
+            </div>
+
             <button class="primary">Send Feedback</button>
         </div>
         <div id="bad--chips" class="feedback-response">
@@ -159,10 +172,18 @@
                 <button class="chip"><p>Got stuck</p></button>
                 <button class="chip" value="other"><p>Other</p></button>
             </div>
+
+            
             <div class="other">
                 <label for="other"><p><strong>If other, please explain</strong></p></label>
                 <textarea type="text" name="other"></textarea>
             </div>
+
+            <div class="help">
+                <p class=""><strong>Still need help?</strong></p>
+                <p><a href="#">Contact us</a> so that we can assist.</p>
+            </div>
+
             <button class="primary" type="reset">Send Feedback</button>
         </div>
     </div>

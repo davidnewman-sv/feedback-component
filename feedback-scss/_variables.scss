@@ -102,6 +102,9 @@ p {
     font-size: 16px;
     line-height: 24px;
 }
+a {
+    color: $color-orange-hyperlink;
+}
 
 .flex-row {
     display: flex;
@@ -154,4 +157,8 @@ button.primary {
         background: $color-orange-hyperlink;
         color: white;
     }
+}
+
+.help {
+    margin-bottom: 24px;
 }
