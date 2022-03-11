@@ -28,6 +28,10 @@
         background-color: $color-orange;
         color: white;
         border-color: $color-orange;
+
+        &.active-hover:hover {
+            background-color: $color-orange-hyperlink;
+        }
     }
 
     &:focus {

@@ -49,12 +49,15 @@
 }
 
 .thumbs {
+
+    &:hover {
+        background-color: $hover-bg-color;
+    }
     svg.whole-hand {
         transform-origin: 0 14px;
     }
     
     &.animated {
-        background-color: $hover-bg-color;
         
         & path.thumb {
             // animation-name: thumb;
@@ -65,6 +68,19 @@
             animation: hand 600ms $animation-mode-expressive;
         }
     }
+
+    &.animated-inactive {
+        
+        & path.thumb {
+            // animation-name: thumb;
+            animation: thumb 600ms $animation-mode-expressive 2;
+            
+        }
+        & svg.whole-hand {
+            animation: hand 600ms $animation-mode-expressive 2;
+        }
+    }
+
     &.animated.selected {
         background-color: $hover-bg-color;
         
@@ -81,20 +97,3 @@
 
 // .st2{fill:#26A9E0;}
 // .st5{fill:#EC1C24;}
-
-
-
-// @keyframes hand {
-//     0% {
-//         transform: translateY(0px); 
-//     }
-//     30% {
-//         transform: translateY(-4px);
-//     }
-//     70% {
-//         transform: translateY(-4px); 
-//     }
-//     100% {
-//         transform: translateY(0px);
-//     }
-// }

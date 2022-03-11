@@ -306,6 +306,10 @@ button.primary:hover {
   border-color: #E3710A;
 }
 
+.chip.active.active-hover:hover {
+  background-color: #9D5B00;
+}
+
 .chip:focus {
   outline: 2px solid #E3710A;
 }
@@ -423,13 +427,13 @@ button.primary:hover {
           transform-origin: 10px 10.3px;
 }
 
+.thumbs:hover {
+  background-color: #ECEDEF;
+}
+
 .thumbs svg.whole-hand {
   -webkit-transform-origin: 0 14px;
           transform-origin: 0 14px;
-}
-
-.thumbs.animated {
-  background-color: #ECEDEF;
 }
 
 .thumbs.animated path.thumb {
@@ -440,6 +444,16 @@ button.primary:hover {
 .thumbs.animated svg.whole-hand {
   -webkit-animation: hand 600ms cubic-bezier(0.4, 0.14, 0.3, 1);
           animation: hand 600ms cubic-bezier(0.4, 0.14, 0.3, 1);
+}
+
+.thumbs.animated-inactive path.thumb {
+  -webkit-animation: thumb 600ms cubic-bezier(0.4, 0.14, 0.3, 1) 2;
+          animation: thumb 600ms cubic-bezier(0.4, 0.14, 0.3, 1) 2;
+}
+
+.thumbs.animated-inactive svg.whole-hand {
+  -webkit-animation: hand 600ms cubic-bezier(0.4, 0.14, 0.3, 1) 2;
+          animation: hand 600ms cubic-bezier(0.4, 0.14, 0.3, 1) 2;
 }
 
 .thumbs.animated.selected {

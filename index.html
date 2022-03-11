@@ -9,16 +9,32 @@
     <link rel="stylesheet" href="feedback-component.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        var inactive = true;
+
         $(document).ready(function(){
+
+            setTimeout(function() {
+                if (inactive) {
+                    $(".thumbs").addClass("animated-inactive")
+                }
+            }, 2500);
+            setTimeout(function() {
+                if (inactive) {
+                    $(".thumbs").removeClass("animated-inactive")
+                }
+            }, 3500);
+            
             // Button hover ~~~~~~~~~~
             $(".thumbs").mouseenter(function() {
                 let button = $(this);
+                $(".thumbs").removeClass("animated-inactive");
+                inactive = false;
                 button.addClass("animated");
                 //remove class after 600ms
                 setTimeout(function() {
                     button.removeClass("animated");
                 }, 600);
-
+                return inactive;
             }); // -- End hover
 
             // Thumbs Button onClick ~~~~~~~~~
@@ -43,22 +59,32 @@
             $(".chip").click(function() {
                 $(this).toggleClass("active");
                 if ($(this).attr("value") == "other") {
-                    $(".other").toggleClass("show");;
+                    $(".other").toggleClass("show");
                 };
-            });
+            }); // -- End Chips
+
+            // Chips active hover ~~~~~~~~~~~
+            $(".chip").hover(function() {
+                if( $(this).hasClass("active")) {
+                    $(this).addClass("active-hover");
+                } else {
+                    $(this).removeClass("active-hover");
+                };
+            }); // -- End Chips active hover
 
             // Submit ~~~~~~~~~~~
             $(".primary").click(function() {
                 $("#feedback").css("display", "none");
                 $("#thankyou").css("display", "flex");
-            });
+            }); // -- Submit
 
             // Reset ~~~~~~~~~~~
             $("#thankyou").click(function() {
                 location.reload(true);
-            })
+            }) // -- Reset
 
         }); // -- End Document.ready
+
     </script>
 </head>
 <body>
